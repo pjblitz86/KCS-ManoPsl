@@ -1,0 +1,224 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/reset.css"/>
+    <!-- <link rel="stylesheet" href="css/main.css"/> -->
+    <link rel="stylesheet" href="lib/bootstrap-3.3.7-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="lib/bootstrap-3.3.7-dist/css/bootstrap-theme.css">
+    <link rel="stylesheet" href="css/antras.css"/>
+    <title>Apie mane</title>
+</head>
+
+<body ng-app="myApp">
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <img class="logo" src="galerija/chess.jpg" alt="logo"/>
+        </div>
+        <div class="collapse navbar-collapse navbar-right">
+            <div ng-controller="ciklasController">
+                <ul class="nav navbar-nav">
+                    <li ng-repeat="title in masyvas3">
+                        <a href="{{title.url}}">{{title.title}} </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!--
+<div class="row">
+    <div class="col-md-2"><img class="logo" src="galerija/chess.jpg" alt="Logo"/></div>
+    <div class="col-md-10">
+        <ul class="menu">
+
+        </ul>
+    </div>
+</div>
+-->
+<div class="row">
+    <div class="col-md-2">
+        <div class="col-md-12"><span>REKLAMA</span></div>
+        <div class="col-md-12"><img src="galerija/thumbnails/KaunasCodingSchool.png" alt="Logo"/></div>
+    </div>
+    <div class="col-md-10">
+        <div class="page-header">
+            <h1>Info
+                <small></small>
+            </h1>
+        </div>
+        <p>
+
+        <div class="col-md-6 col-xs-12">
+            <div id="demo" onclick="slepti()">hhhhhh</div>
+            <input type="button" onclick="SleptiRodyti()"/>
+        </div>
+        <div class="col-md-6 col-xs-12">
+            <img src="galerija/chess.jpg" alt="chess" class="paveikslas"/>
+            <input type="button" value="slepti toggle" class="btn btn-primary" id="mygtukas"/>
+            <input type="button" value="tik slepto" class="btn btn-primary" id="slepti"/>
+            <input type="button" value="tik rodyti" class="btn btn-primary" id="rodyti"/>
+
+        </div>
+
+        <a href="http://google.lt" id="nuoroda">google</a>
+        <script>
+            document.getElementById("demo").innerHTML = "Hello Dolly.";
+            var url = document.getElementById('nuoroda').getAttribute('href');
+            console.log(url);
+        </script>
+
+
+        <div ng-app="myApp">
+            <div ng-controller="manoController">
+                <div ng-show="busena">
+                    <h2>Trumpai apie mane {{5+3}}</h2>
+                    <p>Vardas: <input type="text" ng-model="vardas"></p>
+                    <p ng-click="keistiVarda()">{{vardas}}</p>
+                </div>
+                <button class="btn btn-default" ng-click="busena=!busena">Slepti/Rodyti toggle</button>
+            </div>
+            <div class="col-xs-6" ng-controller="ciklasController">
+                <ul>
+                    <li ng-repeat="reiksme in masyvas">{{reiksme}}</li>
+                </ul>
+            </div>
+            <div ng-repeat="asmuo in masyvas2">{{asmuo.vardas}} {{asmuo.pavarde}}</div>
+        </div>
+        <hr/>
+        <p title="Paragrafas apie mane">Šiuo metu mokausi programavimo pagrindus Kaunas coding school ir
+            savarankiškai
+            :) </br>
+            Pabaigęs kursą, ieškosiu programuotojo darbo/praktikos.
+        </p>
+        <hr/>
+        <a href="http://www.kaunascoding.lt/"><img src="galerija/thumbnails/KaunasCodingSchool2.jpg" width="250"
+                                                   height="100" alt="KCS" title="Eiti į Kaunas Coding School"></a>
+        <hr/>
+        <h3>Programavimo kalbos kurių pagrindus mokausi</h3>
+
+    </div>
+    <div class="tekstoDesine">
+        <form action="submit.php" method="post"> <!-- action i kur sius duomenis script ar adresas -->
+            <input name="vardas" type="text" placeholder="Jusu vardas ?"/><br/>
+            <input name="pastas" type="text" placeholder="Jusu email ?"/><br/>
+            <textarea placeholder="Jusu zinute mums..."></textarea><br/>
+            <input type="submit" value="Siusti"/> <!-- geriau naudoti input nei button -->
+            <!-- <button>Atmesti</button> -->
+        </form>
+        <div class="col-md-6 col-xs-12">
+            <div class="tabai">
+                <ul class="nav nav-tabs">
+                    <li role="presentation" class="tabas" data-lapas="sheet1" onclick="keisti(this)">
+                        <a>1 puslapis</a>
+                    </li>
+                    <li role="presentation" class="tabas" data-lapas="sheet2" onclick="keisti(this)"><a>2 puslapis</a>
+                    </li>
+                    <li role="presentation" class="tabas" data-lapas="sheet3" onclick="keisti(this)"><a>3 puslapis</a>
+                    </li>
+
+                </ul>
+                <div class="panel panel-default">
+                    <div class="panel-body sheet" id="sheet1">1 lentele</div>
+                    <div class="panel-body sheet" id="sheet2">2 lentele</div>
+                    <div class="panel-body sheet" id="sheet3">3 lentele</div>
+                </div>
+            </div>
+            <div class="tabai2">
+                <ul class="nav nav-tabs">
+                    <li role="presentation" class="tabass" data-lapas="sheet1_1">
+                        <a>1 puslapis</a>
+                    </li>
+                    <li role="presentation" class="tabass" data-lapas="sheet2_2"><a>2 puslapis</a>
+                    </li>
+                    <li role="presentation" class="tabass" data-lapas="sheet3_3"><a>3 puslapis</a>
+                    </li>
+
+                </ul>
+                <div class="panel panel-default">
+                    <div class="panel-body sheet" id="sheet1_1">1 lentele</div>
+                    <div class="panel-body sheet" id="sheet2_2">2 lentele</div>
+                    <div class="panel-body sheet" id="sheet3_3">3 lentele</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</nav>
+</div>
+<hr/>
+
+<!-- footerio eilute -->
+<div class="row">
+    <div class="col-md-11">
+        Visos teisės saugomos &copy; 2017
+    </div>
+    <div class="col-md-1">
+        <a href="http://www.kaunascoding.lt/"><img src="galerija/thumbnails/KaunasCodingSchool.png" alt="Logo"
+                                                   title="eiti i KCS"/></a>
+    </div>
+</div>
+
+<!--
+<img src="galerija/thumbnails/csharp.png" alt="C#"/>
+        <p>
+        <pre>       C# kalba – tai C ir C++ programavimo kalbų hibridas. „Microsoft“ sukūrė šią kalbą kaip konkurentę „Java“ kalbai.
+    Ši kalba nors ir paprasta, tačiau yra pakankamai funkcionali. Ji tinka svetainėms, darbalaukiui ir mobilioms programoms kurti.
+    Ši kalba yra gerai dokumentuota bei paklausi Lietuvos darbo rinkoje.
+    Dažniausiai naudojama didelių įmonių sistemoms kurti (pvz., „Microsoft“, „Tesla“, „Danske“).</pre>
+        </p>
+        <img src="galerija/thumbnails/java.jpg" alt="Java"/>
+        <p style="color:#660000" title="Java">
+        <pre>       Programavimo kalba „Java“ naudojama kaip pagrindas, kuriant internetinių puslapių turinį bei mobiliąsias programas.
+    Tai viena populiariausių programavimo kalbų pasaulyje, vienu ar kitu būdu naudojama kiekvienoje didesnėje interneto kompanijoje,
+    taip pat bankuose, finansų įmonėse (pvz., „Google“, „LInkedin“, „Ebay“, „Netflix“, „Amazon“ ir kt.). Tai greita, patikima,
+    lengvai išmokstama ir daug kur pritaikoma kalba. Naudojant šią kalbą kuriamos „Android“ operacinės sistemos programos. </pre>
+        </p>
+        <img src="galerija/thumbnails/mysql.jpg" alt="mySql"/>
+        <p>
+        <pre>    MYSQL – tai standartizuota duomenų bazių valdymo kalba. Ji yra skirta redaguoti ir rasti informaciją,
+        esančią tam tikrose duomenų bazių valdymo sistemose. </pre>
+        </p>
+        <img src="galerija/thumbnails/html5.png" alt="html5"/>
+        <p>
+        <pre>       HTML – tai paprasta ir lengvai išmokstama kalba tinklapiams kurti. Naujausia šios kalbos versija pastaruoju metu tampa
+        viena populiariausių kalbų multimedijai perduoti. Su keliolika šios kalbos žymų galima sukurti visą tinklapį.
+        Dauguma šiuolaikinių HTML rašyklių yra pakankamai funkcionalios, todėl nebereikia rašyti ilgų puslapių kodų. </pre>
+        </p>
+        <img src="galerija/thumbnails/css3.png" alt="css3"/>
+        <p>
+        <pre>        CSS programavimo kalba išplečia HTML kalbos galimybes. Su šia kalba galima atvaizduoti teksto šriftą, tinklapio išdėstymą,
+        spalvas, atstumą tarp elementų. CSS kalba leidžia tą patį stiliaus šabloną naudoti visuose tinklapio puslapiuose. </pre>
+        </p>
+        <img src="galerija/thumbnails/js.png" alt="javaScript"/>
+        <p>
+        <pre>        Šiuolaikinei internetinei svetainei sukurti vien HTML kalbos neužteks. Būtent „Javascript“ kalba padės sukurti patogią naudoti,
+        dinamišką svetainę. Su šia kalba galima kurti išskleidžiamuosius meniu, patvirtinimo lenteles, animaciją ir pan. – viską,
+        kas suteiktų pridėtinės vertės jūsų svetainei. </pre>
+        </p>
+        <hr/>
+        <h4>O štai ir google...</h4>
+        <a href="galerija/thumbnails/google2.jpeg"><img src="galerija/thumbnails/google.jpg" width="150" height="100"
+                                                        alt="Logotipas" title="UAB imone"></a>
+        </p>
+-->
+<script>
+    document.getElementById("demo").innerHTML = "Hello Dolly.";
+    var url = document.getElementById('nuoroda').getAttribute('href');
+    console.log(url);
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+
+<script src="js/antras.js"></script>
+<script src="js/tabai.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="js/jqkodas.js"></script>
+<script src="js/angular/aplikacija.js"></script>
+<script src="js/angular/controllers/manoController.js"></script>
+<script src="js/angular/controllers/ciklasController.js"></script>
+
+</body>
+</html>

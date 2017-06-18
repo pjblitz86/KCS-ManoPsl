@@ -1,0 +1,345 @@
+html, .header, .footer {
+    background-color: dodgerblue;
+}
+
+.header {
+    height: 40px;
+    padding-bottom: 5px;
+}
+
+.footer {
+    height: 40px;
+}
+
+.footerKaire {
+    float: left;
+    width: 80%;
+}
+
+.footerDesine {
+    float: right;
+    width: 20%;
+}
+
+.footerDesine img {
+    max-height: 38px;
+    float: right;
+    border: 2px double black;
+    padding: 0;
+    margin: 0;
+    margin: auto;
+}
+
+.logo_elem, .navbar {
+    float: left;
+    height: 100%;
+}
+
+.logo_elem {
+    width: 20%;
+}
+
+.navbar {
+    width: 80%;
+}
+
+.logo {
+    border: 1px solid black;
+    max-height: 38px;
+    /*float: bottom;*/
+    display: block;
+    margin: auto;
+}
+
+.menu {
+    float: right;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    float: left;
+    border-left: 1px solid #bbb; /* taip trumpinama spalva*/
+}
+
+.menu li a {
+    display: block;
+    padding: 14px 16px;
+    text-decoration: none;
+    color: navajowhite;
+}
+
+.content {
+    background-color: #accbff;
+    min-height: 500px;
+    border: 2px double #0011ff;
+
+}
+
+.ksonas, .dsonas {
+    float: left;
+}
+
+.ksonas {
+    width: 20%;
+}
+
+.dsonas {
+    width: 77%;
+    margin: 20px 15px;
+
+}
+
+.vieta_jums {
+    width: 100%;
+    height: 150px;
+    background-color: darkgrey;
+    margin-top: 5px;
+    border: 3px dashed dimgray;
+}
+
+.vieta_jums img {
+    width: 100%;
+    height: 100%;
+
+}
+
+.vieta_jums span {
+    font-size: 36px;
+    text-align: center;
+    display: block;
+    height: 150px;
+    line-height: 150px;
+    overflow: hidden;
+}
+
+.langas1, .langas2, .langas3 {
+    float: left;
+    width: 25%;
+    margin: auto;
+    padding: 15px;
+    border: 4px double #0a036e;
+    margin: 0 1px;
+    text-align: center;
+}
+
+.langas1 {
+    margin-top: 30px;
+    height: 350px;
+    background-image: url("")
+}
+
+.langas1 ul {
+    font-weight: bold;
+    text-align: left;
+    font-size: 20px;
+    font-family: "Arial Black";
+    line-height: 150%;
+    list-style: circle;
+}
+
+.langas1 h2 {
+    border: 2px solid yellow;
+    color: black;
+    background-color: red;
+    font-size: 20px;
+    padding: 5px;
+    margin: 10px;
+}
+
+.langas1 h3 {
+    border: 2px solid #6a0978;
+    border-radius: 5px;
+    color: navy;
+    font-size: 20px;
+    padding: 5px;
+    margin: 10px;
+}
+
+.langas2 {
+
+}
+
+.langas3 {
+    margin-top: 50px;
+    height: 250px;
+}
+
+.langas3 h2 {
+    border: 2px solid white;
+    font-family: Helvetica;
+    font-weight: 800;
+    color: white;
+    background-color: #0c0a94;
+    font-size: 30px;
+    padding: 5px;
+    margin: 10px;
+}
+
+.langas3 ol {
+    list-style-type: upper-latin;
+    text-align: left;
+    font-size: 15px;
+    font-style: italic;
+    line-height: 125%;
+}
+
+.langas3 h3 {
+    border: 2px solid black;
+    border-radius: 5px;
+    color: navy;
+    background-color: navajowhite;
+    font-size: 20px;
+    padding: 5px;
+    margin: 10px;
+}
+
+.langas3 a {
+    text-decoration: none;
+}
+
+@keyframes animacija2 {
+    /* arba naudoti from{} to{} */
+    0% {
+        background-color: navajowhite;
+    }
+    100% {
+        background-color: #ffa136;
+
+    }
+}
+
+.langas3 a:hover {
+    animation-name: animacija2;
+    animation-duration: 1s;
+    background-color: #ffa136;
+}
+
+@keyframes animacija {
+    /* arba naudoti from{} to{} */
+    0% {
+        background-color: #1e90ff;
+    }
+    50% {
+        background-color: #2f99ff;
+
+    }
+    100% {
+        background-color: #0d1650;
+
+    }
+}
+
+.menu li:hover { /* pseudo klase linkui*/
+    animation-name: animacija;
+    animation-duration: 1s;
+    background-color: #0d1650;
+}
+
+.foto_eile {
+    height: 250px;
+    width: 100%;
+    float: left;
+}
+
+.foto_eile div img {
+    width: 30%;
+    float: left;
+    margin: auto;
+}
+
+.foto_eile div i {
+    width: 4%;
+    float: left;
+    dipslay: block;
+    font-size: 400%;
+    padding: 100px 0;
+    margin: 0;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.antrastes_po_foto {
+    margin: 30px 0;
+    width: 100%;
+    height: 30px;
+    float: left;
+}
+
+.pilna_antraste {
+    float: left;
+    width: 30%;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 10px 0;
+    margin: 0;
+    font-family: "Times New Roman";
+    border: 2px groove #6a0978;
+    text-align: center;
+}
+
+.tuscia_antraste {
+    float: left;
+    width: 4%;
+    height: 30px;
+    padding: 10px 0;
+    margin: 0;
+}
+
+.text_eile p {
+    height: 200px;
+    font-size: 14px;
+    font-family: sans-serif;
+    text-align: justify;
+    text-indent: 40px;
+    line-height: 1.5;
+    text-shadow: 2px 1px navajowhite;
+    <!--overflow: scroll; -->
+}
+
+.text_eile span {
+    font-style: italic;
+    font-weight: bold;
+    color: #ac2925;
+}
+
+.as-foto {
+    border: 2px solid red;
+    padding: 20px;
+    margin: 10px;
+    width: 250px;
+    height: 250px;
+    float: left;
+}
+
+.antraste1 {
+    background-color: navajowhite;
+    border: 2px double black;
+    color: darkblue;
+    font-size: 20px;
+    font-family: Tahoma;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 0;
+}
+
+.tekstasPoFotoAs {
+    color: blue;
+    font-size: 10px;
+    font-family: Verdana;
+}
+
+.tekstas-pasisveikinimas {
+    color: red;
+    font-size: 18px;
+    text-indent: 20px;
+    font-family: "Times New Roman";
+}
+
+.tekstas-pasisveikinimas span {
+    color: darkblue;
+    margin: 15px;
+}
+
+
